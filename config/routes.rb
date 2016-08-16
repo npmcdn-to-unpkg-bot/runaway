@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
 
-  get 'dashboard/track'
+  root 'pages#logo'
 
-  get 'dashboard/profile'
+  get 'pages/about'
+
+  get 'pages/contact'
+
+  get 'pages/sign_in'
+
+  get 'pages/sign_out'
+
+  get 'dashboard/index'#, page: "index"
+
+  get 'dashboard/track'#, page: "track"
+
+  get 'dashboard/profile'#, page: "profile"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
