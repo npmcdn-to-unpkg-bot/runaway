@@ -1,54 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html class="full">
 <head>
   <title>Runaway - Track your motion</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag %>
 </head>
 
 <body>
-
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!--<a class="navbar-brand" href="login.html">Track your motion</a>-->
-      <%= link_to "Track your motion", dashboard_index_path, class: "navbar-brand" %>
+  <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!--<a class="navbar-brand" href="login.html">Track your motion</a>-->
+        <%= link_to "Track your motion", dashboard_index_path, class: "navbar-brand" %>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <!--<a href="dashboard.html">About</a>-->
+            <%= link_to "About", pages_about_path %>
+          </li>
+          <li>
+            <!--<a href="dashboard.html">Contact</a>-->
+            <%= link_to "Contact", pages_contact_path %>
+          </li>
+          <li>
+            <!--<a href="login.html">Sign in</a>-->
+            <%= link_to "Sign in", pages_sign_in_path %>
+          </li>
+          <li>
+            <!--<a href="register.html">Sign up</a>-->
+            <%= link_to "Sign up", pages_sign_out_path %>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li>
-          <!--<a href="dashboard.html">About</a>-->
-          <%= link_to "About", pages_about_path %>
-        </li>
-        <li>
-          <!--<a href="dashboard.html">Contact</a>-->
-          <%= link_to "Contact", pages_contact_path %>
-        </li>
-        <li>
-          <!--<a href="login.html">Sign in</a>-->
-          <%= link_to "Sign in", pages_sign_in_path %>
-        </li>
-        <li>
-          <!--<a href="register.html">Sign up</a>-->
-          <%= link_to "Sign up", pages_sign_out_path %>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
+    <!-- /.container -->
+  </nav>
 
 <!-- Page Content -->
 <%= yield %>
