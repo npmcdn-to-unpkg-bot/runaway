@@ -13,6 +13,7 @@ Preview https://runaway-ctf.herokuapp.com/index.html
 
 # Деплой
 
+* createuser --createdb --login -P runaway
 * запуск докер контейнера
 
 # Дыры
